@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}Project CRUD{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="{% static 'css/styles.css'  %}" rel=stylesheet"/>
+</head>
+<body>
+<div class="max-w-7xl mx-auto ">
+    {% include 'navbar.html' %}
+{%block content%}
+{% endblock %}
+</div>
+</body>
+</html>
