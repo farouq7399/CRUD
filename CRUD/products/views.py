@@ -7,7 +7,7 @@ from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 
 
-class ProductList(LoginRequiredMixin, ListView):
+class ProductList( ListView):
     template_name = 'home_page.html'
     queryset = product.objects.all()
     context_object_name = 'products'
