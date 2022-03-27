@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>welcome Home</h1>
-</body>
-</html>
+{% extends 'skeleton.html'%}
+{%block content%}
+<h1>Welcome Home</h1>
+    {%for product in products%}
+       <h2 class="sm:text-6xl text-2xl font-medium title-font text-blue-600"> {{product.username }}{{product.product_name }}
+    {{product.slug }}</h2>
+    {% endfor%}
+{% endblock %}
