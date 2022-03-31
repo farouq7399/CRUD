@@ -1,0 +1,8 @@
+{% extends 'skeleton.html'%}
+{%block content%}
+<div class="h-56 grid grid-cols-3 gap-4 content-start w-30"><h1 class="text-green-500 text-2xl drop-shadow">Welcome Home</h1>
+<h2 class="text-blue-500 text-2xl drop-shadow">{{product.slug}}</h2>
+<h1 class="text-blue-500 text-2xl drop-shadow">product name :{{product.product_name}}</h1>
+    <a href="{% url 'list' %}">List products</a>
+</div>
+{% endblock %}

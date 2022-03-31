@@ -23,3 +23,12 @@ class CreateProduct(CreateView):
     template_name = 'create_product.html'
     form_class = ProductForm
     context_object_name = "product"
+
+    def get_success_url(self):
+        return reverse("list")
+
+
+class detailsProduct(LoginRequiredMixin, DetailView):
+    template_name = 'details_product.html'
+    queryset = product.objects.all()
+    context_object_name = 'product'

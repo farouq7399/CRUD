@@ -4,4 +4,5 @@ from .models import product
 
 
 
+
 admin.site.register(product)
