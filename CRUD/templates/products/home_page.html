@@ -3,6 +3,9 @@
 <h1>Welcome Home</h1>
     {%for product in products%}
        <h2 class="sm:text-6xl text-2xl font-medium title-font text-blue-600"> {{product.username }}{{product.product_name }}
-    {{product.slug }}</h2>
+        {{product.slug }}
+       </h2>
+        <a href="{% url 'details_product' product.slug %}"> more details</a>
+
     {% endfor%}
 {% endblock %}
