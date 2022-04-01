@@ -4,5 +4,6 @@
 <h2 class="text-blue-500 text-2xl drop-shadow">{{product.slug}}</h2>
 <h1 class="text-blue-500 text-2xl drop-shadow">product name :{{product.product_name}}</h1>
     <a href="{% url 'list' %}">List products</a>
+    <a href="{% url 'delete_product'  product.slug  %}"> delete</a>
 </div>
 {% endblock %}
