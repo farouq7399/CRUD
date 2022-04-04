@@ -28,9 +28,15 @@ class detailsProduct(LoginRequiredMixin, DetailView):
     queryset = product.objects.all()
     context_object_name = 'product'
 
-class DeleteProduct(DeleteView):
+class DeleteProduct (DeleteView):
     template_name = 'delete_product.html'
     queryset = product.objects.all()
 
     def get_success_url(self):
-        return reverse("list")
+        return redirect('list')
+
+
+
+class LandingPageView(TemplateView):
+    template_name ='landing.html'
+
